@@ -330,9 +330,13 @@ let currentUid = null;
 googleSignInBtn.addEventListener('click', () => {
   loginError.textContent = '';
   const provider = new firebase.auth.GoogleAuthProvider();
-  auth.signInWithPopup(provider).catch(err => {
-    loginError.textContent = 'Kuskure: ' + err.message + ' — tabbata app din yana kan hanyar yanar gizo ta gaske (https), ba fayil da aka sauke ba.';
+  auth.signInWithRedirect(provider).catch(err => {
+    loginError.textContent = 'Kuskure: ' + err.message;
   });
+});
+
+auth.getRedirectResult().catch(err => {
+  loginError.textContent = 'Kuskuren shiga: ' + err.message;
 });
 
 signOutBtn.addEventListener('click', () => auth.signOut());
