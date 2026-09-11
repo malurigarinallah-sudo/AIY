@@ -1,1 +1,1 @@
-
+[{      "relation": ["delegate_permission/common.handle_all_urls"],      "target": {        "namespace": "android_app",        "package_name": "io.github.malurigarinallah_sudo.twa",        "sha256_cert_fingerprints": ["38:33:E4:A5:AC:17:9E:A8:B6:6C:83:C8:54:C0:5A:21:38:CC:CC:86:A3:64:50:5A:A0:9D:95:8C:36:05:0F:C9"]      }    }]
